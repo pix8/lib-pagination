@@ -1,0 +1,61 @@
+{
+  "name": "@pix8/lib-pagination",
+  "version": "0.0.1",
+  "description": "JavaScript es6 pagination module",
+  "author": "Jonathan Brincat <jb@pix8.co.uk> (http://pix8.co.uk)",
+  "homepage": "",
+  "keywords": [
+    "pagination",
+    "module",
+    "package",
+    "javascript"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pix8/lib-pagination.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "scripts": {
+    "prestart": "rimraf dist",
+    "prebuild": "rimraf dist",
+    "start": "rollup -c -w ",
+    "test": "jest --env=jsdom",
+    "build": "npm run test && rollup -c",
+    "release:patch": "npm run version:patch && git push --follow-tags origin develop",
+    "release:minor": "npm run version:minor && git push --follow-tags origin develop",
+    "release:major": "npm run version:major && git push --follow-tags origin develop"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.6",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "chokidar": "^2.0.4",
+    "jest": "^26.4.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-includepaths": "^0.2.3",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-url": "^2.2.0"
+  },
+  "peerDependencies": {},
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
