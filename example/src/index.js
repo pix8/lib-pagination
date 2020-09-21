@@ -57,10 +57,3 @@ for(let i = 1; i <= total; i++) {
 
   $example.appendChild(wrapperNode);
 }
-
-/*for(let i = 1; i <= total; i++) {
-  console.log('page = ', i, ' :: ', Paginate(i, total, delta));
-  let node = document.createElement('li');
-  node.innerHTML = JSON.stringify(Paginate(i, total, delta));
-  $example.appendChild(node);
-}*/
