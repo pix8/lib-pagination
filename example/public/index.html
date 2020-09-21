@@ -21,25 +21,32 @@
 	</noscript>
 
 	<header id="app--masthead" role="complementary">
-		<h1>@pix8/Pagination Module example</h1>
+    <div class="container">
+		  <h1>@pix8/Pagination Module example</h1>
+    </div>
 	</header>
 
 	<main id="app--main" role="main">
 		<div class="container">
 			<section>
-				<h2>Paginator</h2>
-        <p>Need an algorithm to apply pagination to a discreet collection of data? You've come to the right place.</p>
-        <p>Extremely low latency implementation. There are basically two approaches to this solution. Firstly you can solve your pagination needs using iteration. Perhaps a for, do while or while loop. Or alternatively you can conditionally create and groom an Array. Most treatments use a hybrid approach using a combination of the two methodologies. This one I believe is unique in that it almost exclusively uses Array functions and absolutely no expensive loops. Moreso by avoiding iterative techniques it should in theory be extremely efficiently by avoiding needless oprations usually performed to check and sanitize or just grudge through the loop. This should make it very performant. But wait there is yet more magic. It footprint is extremely small. In my research I have yet to find a pagination algorithm that achieves the same in less lines of code. Whilst still maintaining some sembelence of readibility. It's actually pretty self-documenting and allows for easy extensibility. With so many wins it is definately worth sharing :)</p>
-
-        <p>There are no options are configurations other than the ability to specify the range of the numbers calculated. This is conceived to be a raw utility function for the purposes of hydration and not a plugin or direct UI. Output format follows the normalised convention/design pattern for pagination.</p>
-			</section>
+        <h2>Output all page returns for a 10 page collection displayed within a 5 page range</h2>
+        <pre class="sample">
+          <code>
+<span><span style="color:hotpink;">import</span> <span style="color:#a7c55d;">Paginate</span> <span style="color:hotpink;">from</span> '@pix8/lib-pagination';<br/></span>
+<span><span style="color:hotpink;">for</span>(<span style="color:#999;">let</span> currentPage <span style="color:hotpink;">=</span> 1; currentPage <span style="color:hotpink;"><=</span> 10; i<span style="color:hotpink;">++</span>) {</span>
+  <span><span style="color:#a7c55d;">Paginate</span>(currentPage, 10, 5);</span>
+<span>}</span>
+          </code>
+        </pre>
+        <ul id="example"></ul>
+      </section>
 		</div>
 	</main>
 
 	<footer id="app--footer">
 		<section>
 			<div class="container">
-				<p>Powered by pix'ie dust. Fuelled by tea. <a href="http://pix8.co.uk" target="_blank">pix8 Ltd</a> &copy; 2019.</p>
+				<p>Powered by pix'ie dust. Fuelled by tea. <a href="http://pix8.co.uk" target="_blank">pix8 Ltd</a> &copy; 2020.</p>
 			</div>
 		</section>
 	</footer>
