@@ -29,7 +29,7 @@ exclude: [
 title: '@pix8/Lib Pagination'
 #logo: /assets/img/logo.png
 logo: /assets/img/pixie-dust.gif
-description: A JavaScript Pagination module that returns an array of indices relative to the current page, total number of pages and range of pages you wish to serve. Useful for Adonis.js.
+description: A JavaScript pagination module that returns an array of indices relative to the current page in relation to the total number of pages and within a range of pages you wish to display - together with the first and last page of the collection if applicable. Useful for Adonis.js.
 show_downloads: true
 google_analytics:
 

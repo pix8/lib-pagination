@@ -2,7 +2,7 @@
 *	Compressed and generated using grunt.js sass/compress build tools
 *
 *	@title: 	styles.main.scss (partial)
-* 	@project: 	
+* 	@project:
 * 	@author: 	Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
 **/
 @charset "UTF-8";
@@ -13,70 +13,109 @@
 	========================================================================== */
 html, body {
 	background: #FFF none;
-}
-
-html {
-	font: 62.5%/1 helvetica, arial, sans-serif;
-	color: #333;
+  font: 62.5%/1 "Noto Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #333;
 }
 
 body{
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+  padding: 50px;
+
+  @media print, screen and (max-width: 480px) {
+    padding:15px;
+  }
+
+  @media print, screen and (max-width: 720px) {
+    word-wrap:break-word;
+  }
+
+  @media print {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+  }
 }
 
 /* =============================================================================
 	Masthead
 	========================================================================== */
-#app--masthead {
-	padding: 10px;
+#app__masthead {
+  width: 270px;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  @media print, screen and (max-width: 720px) {
+    padding: 0;
+  }
+
+  @media print, screen and (max-width: 960px) {
+    float:none;
+    position:static;
+    width:auto;
+    padding-right:320px;
+  }
 }
 
 /* =============================================================================
 	Footer(Site/app)
 	========================================================================== */
-#app--footer{
-	background-color: #000;
-	color: #FFF;
-	padding: 10px;
+#app__footer {
+  width: 270px;
+  float: left;
+  position: fixed;
+  bottom: 50px;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  @media print, screen and (max-width: 960px) {
+    float:none;
+    position:static;
+    width:auto;
+  }
 }
 
-/* ========================================= Page > content */
-#app--content{
+/* =============================================================================
+  Body(Site/app)
+  ========================================================================== */
+#app__body {
+  width: 800px;
+  float: right;
+  padding-bottom: 50px;
+
+  @media print, screen and (max-width: 960px) {
+    float:none;
+    position:static;
+    width:auto;
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
+    margin:0 0 20px;
+  }
 }
-	main {
-		width: 60%;
-  		margin: 0 auto;
-  		flex: 1;
 
-  		display: flex;
-		flex-direction: column;
-  		//justify-content: center;
-	}
+.container {
+  width: 1160px;
+  margin: 0 auto;
 
-	#app--main {
-	}
+  @media print, screen and (max-width: 960px) {
+    width:auto;
+    margin:0;
+  }
+}
 
 /* ========================================= <project> */
 h2 {
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	font-weight: 300;
-	text-transform: uppercase;
-	color: #CCC;
-}
-
-p {
-	margin: 1em 0;
-}
-
-p, li, dt, dd {
-	font-size: 1.4rem;
-	margin: 1em 0;
+	// text-transform: uppercase;
+  font-variant: small-caps;
+	color: $color__grey;
 }
 
 a {
-	color: #A7C55D;
+	color: $theme__primary;
 	text-decoration: none;
 
 	&:hover {
@@ -84,11 +123,84 @@ a {
 	}
 }
 
-@mixin list-unstyled {
-	list-style: none;
-	padding-left: 0;
+.downloads {
+  list-style:none;
+  padding:0;
+  background: $theme__neutral;
+  width:270px;
+  overflow: hidden;//*clearfix*
+
+  @media print, screen and (max-width: 480px) {
+    width: 99%;
+  }
+
+  li {
+    width:89px;
+    float:left;
+    border-right:1px solid #e0e0e0;
+    color: $color__white;
+
+    @media print, screen and (max-width: 480px) {
+      width: 33%;
+    }
+
+    &:first-child a {
+      border-radius:5px 0 0 5px;
+    }
+
+    &:last-child a {
+      border-radius:0 5px 5px 0;
+    }
+  }
+
+  li + li + li {
+    border-right:none;
+    width:89px;
+
+    @media print, screen and (max-width: 480px) {
+      width: 33%;
+    }
+  }
+
+  a {
+    line-height:1.5;
+    font-size:11px;
+    display:block;
+    text-align:center;
+    padding: 6px 0;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: $color__black;
+    }
+
+    &:active {
+      background-color:#f0f0f0;
+    }
+  }
+
+  a strong {
+    font-size:14px;
+    display:block;
+  }
 }
 
-.list-unstyled {
-	@include list-unstyled;
+@media print, screen and (max-width: 960px) {
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+}
+
+@media print, screen and (max-width: 720px) {
+  header ul, header p.view {
+    position: static;
+  }
 }

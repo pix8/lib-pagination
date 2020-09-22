@@ -32,7 +32,6 @@
   },
   "dependencies": {
     "@pix8/lib-pagination": "0.0.1",
-    "@pix8/ui-accordion": "0.0.13",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

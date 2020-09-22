@@ -2,34 +2,44 @@
 ---
 //DEVNOTE: imports are relative to "sass_dir"("_sass" directory as default) in project root
 
-$color__primary: 		#A7C55D;
-$color__secondary: 	#EC008C;
-$color__base: 			#888888;
+@mixin font-size($value) {
+  font-size: ($value / ($value * 0 + 1)) * 10 + px; // <ie9
+  font-size: $value / ($value * 0 + 1) + rem;
+}
+
+@mixin list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-unstyled {
+  @include list-unstyled;
+}
+
+$color__pix8-pink: 	#EC008C;
+$color__pix8-lime: 	#A7C55D;
 
 $color__white: 			#FFF;
+$color__black:      #000;
+$color__grey:       #333;
 
-/*
-*
-*	@title:
-* 	@project: 	github pages - minimal theme
-* 	@author:	github
-**/
+$theme__primary:    $color__pix8-pink;
+$theme__secondary:  $color__pix8-lime;
+$theme__neutral: 		#888888;
 
-@import "jekyll-theme-minimal";
+$baseFontSizeRem:   1rem;
+$margin:            1em;
+$padding:           6px;
 
 /*
 *
 *	@title: 	main.scss
-* 	@project: 	pagination-lib
-* 	@author:	pix8
+* @project: pagination-lib
+* @author:	pix8
 **/
 
-//@import '../node_modules/normalize.css/normalize.css';
-
+@import 'fonts';
+@import 'rouge-github';
+@import 'core.reboot';
 @import 'styles.main';
 @import 'lib.pagination';
-@import 'app.theme';
-
-.current {
-	color: green;
-}

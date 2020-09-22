@@ -1,6 +1,6 @@
 import Paginate from '@pix8/lib-pagination';
 
-const current = 1, total = 10, delta = 5;
+const current = 1, total = 20, delta = 7;
 
 const $example = document.getElementById('example');
 
@@ -15,7 +15,7 @@ for(let i = current; i <= total; i++) {
   };
 
   const text = {
-    label: document.createTextNode(`Current page = ${i}`),
+    label: document.createTextNode(i),
     index: document.createTextNode(`${JSON.stringify(Paginate(i, total, delta))}`),
   }
 

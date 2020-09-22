@@ -1,9 +1,9 @@
 /*
 *	Compressed and generated using grunt.js sass/compass build tools
 *
-*	@title: 		core.reset.scss (partial)
-* 	@project: 		pix8 reset
-* 	@author: 		Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
+*	@title: 		core.reboot.scss (partial)
+* @project: 	pix8 reboot
+* @author: 		Jonathan Brincat@pix8.co.uk, <jonathan@pix8.co.uk>
 *
 *	@description:
 *
@@ -16,7 +16,7 @@
 	========================================================================== */
 html, body {
 	background-color: #FFF;
-	font-family: 'Quicksand', 'Nunito', verdana, helvetica, arial, clean, sans-serif;
+	font-family: verdana, helvetica, arial, clean, sans-serif;
 	color: $color__grey;
 }
 
@@ -60,14 +60,14 @@ h4{ 	@include font-size(1.8rem);} 		//18px
 h5{ 	@include font-size(1.6rem);} 		//16px
 h6{ 	@include font-size(1.6rem);} 		//16px
 
-@media screen and (min-width: $screen-sm-min) {
-	h1{		@include font-size(7.2rem);} 		//62px
-	h2{ 	@include font-size(2.0rem);} 		//26px
-	h3{ 	@include font-size(2.2rem);} 		//22px
-	h4{ 	@include font-size(2rem);} 			//20px
-	h5{ 	@include font-size(1.8rem);} 		//18px
-	h6{ 	@include font-size(1.6rem);} 		//16px
-}
+// @media screen and (min-width: $screen-sm-min) {
+// 	h1{		@include font-size(7.2rem);} 		//62px
+// 	h2{ 	@include font-size(2.0rem);} 		//26px
+// 	h3{ 	@include font-size(2.2rem);} 		//22px
+// 	h4{ 	@include font-size(2rem);} 			//20px
+// 	h5{ 	@include font-size(1.8rem);} 		//18px
+// 	h6{ 	@include font-size(1.6rem);} 		//16px
+// }
 
 /* =============================================================================
 	Core
@@ -146,11 +146,11 @@ dd{}
 button{
 	@include font-size($baseFontSizeRem);
 	margin:$margin 0;
-	padding:$halfpadding $padding;
+	padding:$padding/2 $padding;
 }
 
 hr{
-	border-color:$color__grey75;
+	border-color:$color__grey;
 	margin:$margin 0;
 }
 
@@ -183,8 +183,22 @@ cite {
 	margin-bottom: $margin/2;
 }
 
-code {
-	color: $theme__primary;
+code, pre {
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+  color: $color__grey;
+
+  @media print, screen and (max-width: 720px) {
+    word-wrap: normal;
+  }
+}
+
+pre {
+  padding: 8px 15px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  overflow-x: auto;
+  @include font-size($baseFontSizeRem);
 }
 
 address {
