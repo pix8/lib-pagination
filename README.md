@@ -2,6 +2,7 @@
 
 
 [![npm (scoped)](https://img.shields.io/npm/v/@pix8/lib-pagination.svg)](https://www.npmjs.com/package/@pix8/lib-pagination)
+[![CircleCI](https://circleci.com/gh/pix8/lib-pagination.svg?style=svg&circle-token=1087e02408bd932a6ad3430268cc484bd6735ba5)](https://circleci.com/gh/pix8/lib-pagination)
 
 ## About
 
