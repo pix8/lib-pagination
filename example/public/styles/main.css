@@ -52,6 +52,18 @@ main section {
   display: inline-block;
 }
 
+.syntax__highlight--pink {
+  color: hotpink;
+}
+
+.syntax__highlight--lime {
+  color: #a7c55d;
+}
+
+.syntax__highlight--grey {
+  color: #999;
+}
+
 ul {
   font-size: 1em;
   list-style-type: none;
