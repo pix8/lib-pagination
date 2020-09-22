@@ -1,14 +1,14 @@
 {
   "name": "@pix8/lib-pagination_gh-pages",
   "version": "0.0.1",
-  "description": "es6 pagination module",
+  "description": "JavaScript pagination module",
   "author": "Jonathan Brincat <jb@pix8.co.uk> (http://pix8.co.uk)",
   "homepage": "https://pix8.github.io/lib-pagination/",
   "keywords": [
     "pagination",
     "module",
     "package",
-    "javascript",
+    "javascript"
   ],
   "license": "ISC",
   "repository": {
@@ -31,6 +31,7 @@
     "build2": "webpack -c && JEKYLL_ENV=production bundle exec jekyll build"
   },
   "dependencies": {
+    "@pix8/lib-pagination": "0.0.1",
     "@pix8/ui-accordion": "0.0.13",
     "normalize.css": "^8.0.1"
   },
@@ -48,7 +49,7 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "rollup": "^1.6.0",
-    "rollup-plugin-alias": "^1.5.1",
+    "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-includepaths": "^0.2.3",

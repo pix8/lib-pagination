@@ -1,18 +1,4 @@
-collections:
-  authors:
-    output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
   - scope:
       path: ""
     values:
@@ -40,12 +26,12 @@ exclude: [
   example
 ]
 
-title: '@pix8/UI Accordion'
+title: '@pix8/Lib Pagination'
 #logo: /assets/img/logo.png
 logo: /assets/img/pixie-dust.gif
-description: A simple JavaScript Accordion with a simple objective.
+description: A JavaScript Pagination module that returns an array of indices relative to the current page, total number of pages and range of pages you wish to serve. Useful for Adonis.js.
 show_downloads: true
 google_analytics:
 
-repository: pix8/ui-accordion
+repository: pix8/lib-pagination
 #theme: jekyll-theme-minimal
