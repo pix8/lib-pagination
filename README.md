@@ -10,10 +10,6 @@ Assistive utility library for returning an Array of paginated indices from the c
 
 This is useful for the creation of passive pagination user interfaces on the client when you are requesting paginated sets from an endpoint exposing the collection as a whole and was conceived as a solution to rendering such an interface in Adonis.js but could just as very easily be applied to a client-side MV* library such as Vue.js or React.
 
-## Example
-
-[Demo - JS Fiddle](https://jsfiddle.net/jonathanbrincat/c1h6487k/199/) @v0.0.13
-
 ## Install
 Install package from NPM into your project dependencies.
 
@@ -26,14 +22,6 @@ npm install @pix8/lib-pagination --save
 ```bash
 yarn add @pix8/lib-pagination
 ```
-
-#### CDN
-```html
-https://unpkg.com/@pix8/lib-pagination@0.0.1/dist/index.umd.js
-```
-Note: package will be available off the global(window) namespace as `libPagination`.
-
-All sources are obfuscated and minified.
 
 ## Usage
 Pagination module is available as a javascript module. `import`, instantiate and consume.
